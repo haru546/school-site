@@ -1,0 +1,15 @@
+
+document.addEventListener('DOMContentLoaded', function () {
+    let menuToggle = document.querySelector('.menu-toggle');
+    let navMenu = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function () {
+        if (navMenu.style.display === 'none' || navMenu.style.display === '') {
+            navMenu.style.display = 'flex';
+            menuToggle.innerHTML = '&#10006;'; // ハンバーガーアイコンからばつに変更
+        } else {
+            navMenu.style.display = 'none';
+            menuToggle.innerHTML = '&#9776;'; // ばつからハンバーガーアイコンに変更
+        }
+    });
+});
